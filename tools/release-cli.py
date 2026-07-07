@@ -224,7 +224,7 @@ async def fetch_state() -> State:
                     "url": pr["url"],
                     "labels": [lbl["name"] for lbl in pr.get("labels", [])],
                 }
-        except (json.JSONDecodeError, KeyError):
+        except json.JSONDecodeError, KeyError:
             pass
 
     return state

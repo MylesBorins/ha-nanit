@@ -12,8 +12,8 @@ setup:
     #!/usr/bin/env bash
     set -euo pipefail
     if [ ! -d venv ]; then
-        echo "Creating venv with python3.13 ..."
-        python3.13 -m venv venv
+        echo "Creating venv with python3.14 ..."
+        python3.14 -m venv venv
     fi
     echo "Upgrading pip + setuptools ..."
     venv/bin/python3 -m pip install --upgrade pip setuptools wheel

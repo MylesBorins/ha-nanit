@@ -122,7 +122,7 @@ def try_decode_string(data: bytes) -> str | None:
     """Try to decode bytes as UTF-8 string."""
     try:
         return data.decode("utf-8")
-    except (UnicodeDecodeError, ValueError):
+    except UnicodeDecodeError, ValueError:
         return None
 
 

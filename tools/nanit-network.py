@@ -121,7 +121,7 @@ async def async_main() -> int:
             try:
                 print(f"\nNext request in {args.watch}s (Ctrl+C to stop)")
                 await asyncio.sleep(args.watch)
-            except (KeyboardInterrupt, asyncio.CancelledError):
+            except KeyboardInterrupt, asyncio.CancelledError:
                 print("\nStopped.")
                 break
 

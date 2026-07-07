@@ -34,7 +34,7 @@ def _card_resource_version() -> str:
             (Path(__file__).parent.parent / "manifest.json").read_text()
         )
         manifest_version = str(manifest.get("version", "0"))
-    except (FileNotFoundError, json.JSONDecodeError, KeyError):
+    except FileNotFoundError, json.JSONDecodeError, KeyError:
         pass
 
     try:
@@ -51,7 +51,7 @@ try:
         (Path(__file__).parent.parent / "manifest.json").read_text()
     )
     _MANIFEST_VERSION = str(_manifest.get("version", "0"))
-except (FileNotFoundError, json.JSONDecodeError, KeyError):
+except FileNotFoundError, json.JSONDecodeError, KeyError:
     pass
 
 

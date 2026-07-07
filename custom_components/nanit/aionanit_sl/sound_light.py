@@ -182,7 +182,7 @@ class NanitSoundLight:
         self._use_cloud_relay = self._device_ip is None
         try:
             await self._async_connect()
-        except (NanitTransportError, NanitConnectionError):
+        except NanitTransportError, NanitConnectionError:
             _LOGGER.warning(
                 "S&L %s initial connection failed; will retry in background",
                 self._speaker_uid,

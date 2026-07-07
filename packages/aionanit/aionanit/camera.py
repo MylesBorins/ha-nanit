@@ -1145,7 +1145,7 @@ class NanitCamera:
                         )
                         # Local is reachable — promote.
                         await probe.async_close()
-                    except (TimeoutError, NanitConnectionError, NanitTransportError):
+                    except TimeoutError, NanitConnectionError, NanitTransportError:
                         _LOGGER.debug("Local probe failed, staying on cloud")
                         continue
 
